@@ -9,7 +9,7 @@ import nicedictionary.ca.featuredictionary.domain.model.WordInfo
 data class WordInfoEntity(
     val word: String,
     val phonetic: String,
-    val sourceUrls: List<String>,
+    val sourceUrls: String?,
     val meanings: List<Meaning>,
     @PrimaryKey val id: Int? = null
 ) {
