@@ -9,7 +9,6 @@ import nicedictionary.ca.featuredictionary.domain.model.WordInfo
 import nicedictionary.ca.featuredictionary.domain.repository.WordInfoRepository
 import retrofit2.HttpException
 import java.io.IOException
-import java.lang.Exception
 
 class WordInfoRepositoryImpl(
     private val api: DictionaryApi,
@@ -38,5 +37,8 @@ class WordInfoRepositoryImpl(
                 data = wordInfos
             ))
         }
+
+        val newWordInfos = dao.getWordInfos(word).map { it.toWordInfo() }
+        emit(Resource.Success(newWordInfos))
     }
 }
