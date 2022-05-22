@@ -5,10 +5,10 @@ This is a simple Dictionary App using Clean Architecture (MVVM, Use Cases, Compo
 
 For this API is used:
 Dictionary API
-[coinpaprika.com](https://dictionaryapi.dev/)
+- https://dictionaryapi.dev/
 
 Sample route:
-https://api.dictionaryapi.dev/api/v2/entries/en/bank
+- https://api.dictionaryapi.dev/api/v2/entries/en/bank
 
 ### 📷 How is this App
 <img src="Screenshot_20220521-224031.png" width="25%"></img>
