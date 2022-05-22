@@ -8,7 +8,7 @@ data class MeaningDto(
 ) {
     fun toMeaning(): Meaning {
         return Meaning(
-            definitions = definitions.map { it.toDefinition() },
+            definitions = definitions?.map { it.toDefinition() },
             partOfSpeech = partOfSpeech
         )
     }

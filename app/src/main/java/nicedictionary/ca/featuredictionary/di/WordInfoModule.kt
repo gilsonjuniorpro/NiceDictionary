@@ -3,12 +3,13 @@ package nicedictionary.ca.featuredictionary.di
 import android.app.Application
 import androidx.room.Room
 import com.google.gson.Gson
+
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import nicedictionary.ca.core.util.GsonParser
-import nicedictionary.ca.featuredictionary.data.local.WordInfoDao
+import nicedictionary.ca.featuredictionary.data.local.Converters
 import nicedictionary.ca.featuredictionary.data.local.WordInfoDatabase
 import nicedictionary.ca.featuredictionary.data.remote.DictionaryApi
 import nicedictionary.ca.featuredictionary.data.repository.WordInfoRepositoryImpl
@@ -43,7 +44,7 @@ object WordInfoModule {
         return Room.databaseBuilder(
             app, WordInfoDatabase::class.java, "dictionary_db"
         )
-        .addTypeConverter(GsonParser(Gson()))
+        .addTypeConverter(Converters(GsonParser(Gson())))
         .build()
     }
 
