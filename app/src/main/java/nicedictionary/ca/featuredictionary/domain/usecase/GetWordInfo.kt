@@ -10,7 +10,7 @@ class GetWordInfo(
     private val repository: WordInfoRepository
 ) {
 
-    override fun invoke(word: String): Flow<Resource<List<WordInfo>>> {
+    operator fun invoke(word: String): Flow<Resource<List<WordInfo>>> {
         if(word.isBlank()) {
             return flow {  }
         }
