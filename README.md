@@ -8,7 +8,7 @@ Dictionary API
 [coinpaprika.com](https://dictionaryapi.dev/)
 
 Sample route:
-[https://api.coinpaprika.com/v1/coins](https://api.dictionaryapi.dev/api/v2/entries/en/bank)
+https://api.dictionaryapi.dev/api/v2/entries/en/bank
 
 ### 📷 How is this App
 <img src="Screenshot_20220521-224031.png" width="25%"></img>
